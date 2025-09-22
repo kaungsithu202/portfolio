@@ -65,7 +65,7 @@
         company="MYANMAR HIGH SOCIETY"
         position="Frontend Developer"
         timeline="2022 NOV - 2025 JUN"
-        image="/public/imgs/mhs.jpg"
+        image="/imgs/mhs.jpg"
         link="https://myanmarhighsociety.com/"
       />
 
@@ -73,7 +73,7 @@
         company="RECITE DESIGN ATS"
         position="Frontend Developer"
         timeline="2025 APR - 2025 SEP"
-        image="/public/imgs/recite.svg"
+        image="/imgs/recite.svg"
         link="https://www.recsitedesign.com/"
       />
 
@@ -87,7 +87,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-3">
         <Project
-          image="/public/imgs/projects/mypet.png"
+          image="/imgs/projects/mypet.png"
           name="MyPetMM.com"
           description="Developed an e-commerce platform for MyPet Myanmar, a leading online pet supply store offering a wide range of products for pets including dogs,cats, and birds."
           techStacks={[
@@ -101,7 +101,7 @@
         />
 
         <Project
-          image="/public/imgs/projects/m21.png"
+          image="/imgs/projects/m21.png"
           name="M21Sport.com"
           description="M21 Sport is a prominent Myanmar-based sportswear brand established in 2015, specializing in the design, production, and retail of high-quality sports apparel and equipment. Initially starting as a retail store, the company expanded into manufacturing custom items and has since become a key player in Myanmar's sports industry."
           techStacks={[
