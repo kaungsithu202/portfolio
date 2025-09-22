@@ -16,7 +16,7 @@
   <div class="flex items-center gap-1 flex-wrap mt-1.5">
     {#each techStacks as tech (tech)}
       <div
-        class="bg-gray-600 text-sm md:text-base text-white w-fit text-[10px] rounded-md py-1 px-2"
+        class="bg-gray-600 text-white w-fit text-[10px] rounded-md py-1 px-2"
       >
         {tech}
       </div>
