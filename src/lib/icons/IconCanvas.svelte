@@ -1,0 +1,82 @@
+<script lang="ts">
+  export let size: number = 48;
+  export let c1: string = "#06b6d4"; // teal
+  export let c2: string = "#8b5cf6"; // purple
+  export let c3: string = "#f97316"; // orange
+  export let bg: string = "#49108B";
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 120 120"
+  width={size}
+  height={size}
+  role="img"
+  aria-labelledby="canvasIconTitle"
+  class="z-50"
+>
+  <title id="canvasIconTitle">Canvas icon — colorful layered brush</title>
+
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color={c1} />
+      <stop offset="100%" stop-color={c2} />
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" x2="100%" y1="100%" y2="0%">
+      <stop offset="0%" stop-color={c2} />
+      <stop offset="100%" stop-color={c3} />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect
+    x="8"
+    y="8"
+    width="104"
+    height="104"
+    rx="18"
+    ry="18"
+    fill={bg}
+    opacity="0.85"
+  />
+  <rect
+    x="16"
+    y="16"
+    width="88"
+    height="88"
+    rx="14"
+    ry="14"
+    fill={bg}
+    opacity="0.35"
+  />
+
+  <g filter="url(#shadow)">
+    <path
+      d="M28 78 C42 50, 78 48, 92 36 C100 30, 106 24, 100 18 C92 10, 70 18, 56 26 C40 36, 30 54, 28 78 Z"
+      fill="url(#g1)"
+      transform="translate(0,-4)"
+      opacity="0.95"
+    />
+    <path
+      d="M34 74 C48 50, 74 46, 86 36 C94 30, 98 26, 94 22 C86 16, 68 22, 56 28 C42 36, 36 60, 34 74 Z"
+      fill="url(#g2)"
+      transform="translate(0,-2)"
+      opacity="0.95"
+    />
+    <circle cx="86" cy="30" r="5" fill="white" opacity="0.9" />
+  </g>
+
+  <rect
+    x="8"
+    y="8"
+    width="104"
+    height="104"
+    rx="18"
+    ry="18"
+    fill="none"
+    stroke="rgba(255,255,255,0.06)"
+    stroke-width="1"
+  />
+</svg>

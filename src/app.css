@@ -1,0 +1,28 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"); */
+
+@theme {
+  --font-josefin: "Josefin Sans", sans-serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-second: marquee 8s linear infinite;
+  --animate-marquee-vertical: marquee-vertical 10s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100%));
+    }
+  }
+}
