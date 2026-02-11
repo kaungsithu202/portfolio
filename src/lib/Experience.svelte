@@ -9,7 +9,7 @@
     <img
       src={image}
       class="rounded-full size-8 md:size-16"
-      alt="Myanmar High Society"
+      alt={company}
     />
     <div>
       <p class="font-bold text-[10px] md:text-base">{company}</p>

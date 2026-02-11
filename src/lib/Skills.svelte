@@ -45,7 +45,7 @@
 </script>
 
 <div
-  class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white/50 dark:bg-slate-900/40 my-6 transition-colors"
+  class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white/50 dark:bg-slate-950/10 my-6 transition-colors"
 >
   <Marquee pauseOnHover>
     {#each firstRow as skill}
