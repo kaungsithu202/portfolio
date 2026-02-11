@@ -52,10 +52,9 @@
       Full-Stack Developer
     </text>
     <text x="120" y="390" fill="#94a3b8" font-size="24">
-      Projects • Experience • Contact
+      Projects &#8226; Experience &#8226; Contact
     </text>
   </g>
 
   <rect x="120" y="430" width="220" height="10" rx="5" fill="url(#accent)" />
 </svg>
-
