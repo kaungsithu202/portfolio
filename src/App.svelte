@@ -17,12 +17,16 @@
   import Project from "./lib/Project.svelte";
   import BackgroundPattern from "./lib/BackgroundPattern.svelte";
   import Education from "./lib/Education.svelte";
+  import Contact from "./lib/Contact.svelte";
+  import ThemeToggle from "./lib/ThemeToggle.svelte";
 </script>
 
 <BackgroundPattern>
-  <main class="mx-10 md:mx-[200px] lg:mx-[500px] my-10 font-josefin">
+  <main
+    class="mx-10 md:mx-[200px] lg:mx-[500px] py-10 font-geist-pixel-circle transition-colors"
+  >
     <h1
-      class="text-start flex items-center gap-5 text-3xl md:text-5xl font-bold text-black"
+      class="text-start flex items-center gap-5 text-3xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 transition-colors"
     >
       <span class="z-50">Kaung Si Thu</span>
       <IconCanvas />
@@ -32,24 +36,30 @@
       class="text-lg md:text-2xl mt-6"
     />
 
-    <div class="flex items-center gap-2 mt-5">
-      <IconButton href="https://github.com/kaungsithu202">
-        <GithubIcon size="16" />
-      </IconButton>
-      <IconButton href="https://www.linkedin.com/in/kaung-si-thu-7079ba23b/">
-        <LucideLinkedin size="16" />
-      </IconButton>
-      <IconButton href="https://x.com/karl2021998">
-        <IconSocialX size="16" />
-      </IconButton>
-      <IconButton href="mailto:kaungsithu1998202@gmail.com">
-        <Mail size="16" />
-      </IconButton>
+    <div class="flex items-center mt-5 gap-3">
+      <div class="flex items-center gap-2">
+        <IconButton href="https://github.com/kaungsithu202">
+          <GithubIcon size="16" />
+        </IconButton>
+        <IconButton href="https://www.linkedin.com/in/kaung-si-thu-7079ba23b/">
+          <LucideLinkedin size="16" />
+        </IconButton>
+        <IconButton href="https://x.com/karl2021998">
+          <IconSocialX size="16" />
+        </IconButton>
+        <IconButton href="mailto:kaungsithu1998202@gmail.com">
+          <Mail size="16" />
+        </IconButton>
+      </div>
+
+      <div class="ml-auto">
+        <ThemeToggle />
+      </div>
     </div>
 
     <SectionTitle title="About" />
 
-    <p class="text-slate-700 text-xs md:text-base">
+    <p class="text-slate-700 dark:text-slate-300 text-xs md:text-base">
       I love taking an idea, turning it into something real, and seeing people
       actually use it. From IoT-powered healthcare to open-source fitness tools,
       I’m all about shipping fast and solving real problems. My stack? A good
@@ -77,9 +87,17 @@
         link="https://www.recsitedesign.com/"
       />
 
+      <Experience
+        company="A3L"
+        position="Fullstack Developer"
+        timeline="2025 DEC - Present"
+        image="/imgs/a3l.jpg"
+        link="https://www.linkedin.com/company/a3l-dev/posts/?feedView=all"
+      />
+
       <SectionTitle title="Projects" />
 
-      <p class="text-slate-700 text-xs md:text-base">
+      <p class="text-slate-700 dark:text-slate-300 text-xs md:text-base">
         Throughout my experience, I’ve contributed to diverse projects, tackling
         both simple and complex challenges. Below are some of my favorite
         projects.
@@ -119,6 +137,9 @@
 
       <Education name="Pathein Technology University" level="Mechanical 3 BE" />
       <Education name="NCC Education" level="Level 4 : Diploma In Computing" />
+
+      <SectionTitle title="Contact" />
+      <Contact />
     </div>
   </main>
 </BackgroundPattern>

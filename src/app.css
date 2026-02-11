@@ -1,8 +1,96 @@
 @import "tailwindcss";
 /* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"); */
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.dark body {
+  background-color: #020617;
+}
+
+:root {
+  --pattern-line: #e7e5e4;
+}
+
+.dark {
+  --pattern-line: oklch(37.2% 0.044 257.287);
+}
+
+@font-face {
+  font-family: "Geist Pixel Circle";
+  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Circle.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Grid";
+  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Grid.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Line";
+  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Line.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Square";
+  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Square.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Pixel Triangle";
+  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Triangle.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-josefin: "Josefin Sans", sans-serif;
+
+  --font-geist-pixel-circle:
+    "Geist Pixel Circle", "Geist Mono", ui-monospace, SFMono-Regular,
+    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
+    "Courier New", monospace;
+  --font-geist-pixel-grid:
+    "Geist Pixel Grid", "Geist Mono", ui-monospace, SFMono-Regular,
+    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
+    "Courier New", monospace;
+  --font-geist-pixel-line:
+    "Geist Pixel Line", "Geist Mono", ui-monospace, SFMono-Regular,
+    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
+    "Courier New", monospace;
+  --font-geist-pixel-square:
+    "Geist Pixel Square", "Geist Mono", ui-monospace, SFMono-Regular,
+    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
+    "Courier New", monospace;
+  --font-geist-pixel-triangle:
+    "Geist Pixel Triangle", "Geist Mono", ui-monospace, SFMono-Regular,
+    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
+    "Courier New", monospace;
 
   --animate-marquee: marquee 25s linear infinite;
   --animate-marquee-second: marquee 8s linear infinite;

@@ -1,11 +1,13 @@
-<div class="min-h-screen w-full relative">
+<div
+  class="min-h-screen w-full relative z-0 bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
+>
   <!-- Dashed Gradient Background -->
   <div
     class="absolute inset-0 -z-10"
     style="
       background-image:
-        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
-        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px);
+        linear-gradient(to right, var(--pattern-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--pattern-line) 1px, transparent 1px);
       background-size: 20px 20px;
       background-position: 0 0, 0 0;
       mask-image:

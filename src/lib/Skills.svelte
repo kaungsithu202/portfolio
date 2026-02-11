@@ -45,7 +45,7 @@
 </script>
 
 <div
-  class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background pt-6"
+  class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white/50 dark:bg-slate-900/40 my-6 transition-colors"
 >
   <Marquee pauseOnHover>
     {#each firstRow as skill}
@@ -59,9 +59,9 @@
   </Marquee>
 
   <div
-    class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"
+    class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-slate-950"
   ></div>
   <div
-    class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"
+    class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-slate-950"
   ></div>
 </div>
