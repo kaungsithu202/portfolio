@@ -29,20 +29,22 @@
   }
 </script>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-3">
+<div class="mt-4 grid grid-cols-1 gap-3 lg:grid-cols-2">
   <div
-    class="border border-gray-200 dark:border-slate-700 rounded-md p-3 bg-white/50 dark:bg-slate-900/40 transition-colors"
+    class="rounded-2xl border border-slate-200/80 bg-white/75 p-4 backdrop-blur transition-colors dark:border-slate-700/70 dark:bg-slate-900/50"
   >
-    <h3 class="text-sm md:text-base font-semibold">Let’s connect</h3>
-    <p class="text-[10px] md:text-xs text-slate-700 dark:text-slate-300 mt-1.5">
-      Have a project, a role, or just want to say hi? Send a message and I’ll
+    <h3 class="text-sm font-semibold tracking-[0.12em] uppercase md:text-base">
+      Let's connect
+    </h3>
+    <p class="mt-2 text-[10px] leading-5 text-slate-700 md:text-xs dark:text-slate-300">
+      Have a project, a role, or just want to say hi? Send a message and I'll
       get back to you.
     </p>
 
-    <div class="flex flex-col gap-2 mt-3">
+    <div class="mt-4 flex flex-col gap-2">
       <a
         href={`mailto:${CONTACT_EMAIL}`}
-        class="inline-flex items-center gap-2 border border-gray-200 dark:border-slate-700 rounded-md px-3 py-2 text-[10px] md:text-xs hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+        class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-[10px] transition hover:border-cyan-300 hover:text-cyan-700 md:text-xs dark:border-slate-700 dark:bg-slate-950/50 dark:hover:border-cyan-700 dark:hover:text-cyan-300"
       >
         <Mail class="size-3 md:size-4" />
         {CONTACT_EMAIL}
@@ -52,7 +54,7 @@
         href={LINKEDIN_URL}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 border border-gray-200 dark:border-slate-700 rounded-md px-3 py-2 text-[10px] md:text-xs hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+        class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-[10px] transition hover:border-cyan-300 hover:text-cyan-700 md:text-xs dark:border-slate-700 dark:bg-slate-950/50 dark:hover:border-cyan-700 dark:hover:text-cyan-300"
       >
         <LucideLinkedin class="size-3 md:size-4" />
         LinkedIn
@@ -62,7 +64,7 @@
         href={GITHUB_URL}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 border border-gray-200 dark:border-slate-700 rounded-md px-3 py-2 text-[10px] md:text-xs hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+        class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-[10px] transition hover:border-cyan-300 hover:text-cyan-700 md:text-xs dark:border-slate-700 dark:bg-slate-950/50 dark:hover:border-cyan-700 dark:hover:text-cyan-300"
       >
         <GithubIcon class="size-3 md:size-4" />
         GitHub
@@ -71,19 +73,19 @@
   </div>
 
   <form
-    class="border border-gray-200 dark:border-slate-700 rounded-md p-3 bg-white/50 dark:bg-slate-900/40 transition-colors"
+    class="rounded-2xl border border-slate-200/80 bg-white/75 p-4 backdrop-blur transition-colors dark:border-slate-700/70 dark:bg-slate-900/50"
     on:submit|preventDefault={handleSubmit}
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
       <div>
         <label
-          class="block text-[10px] md:text-xs text-slate-700 dark:text-slate-300 mb-1"
+          class="mb-1 block text-[10px] tracking-[0.12em] text-slate-700 uppercase md:text-xs dark:text-slate-300"
           for="name"
           >Name</label
         >
         <input
           id="name"
-          class="w-full border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 rounded-md px-3 py-2 text-[10px] md:text-xs focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-slate-700 transition-colors"
+          class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-[10px] focus:ring-2 focus:ring-cyan-200 focus:outline-none md:text-xs dark:border-slate-700 dark:bg-slate-950 dark:focus:ring-cyan-900"
           autocomplete="name"
           placeholder="Your name"
           bind:value={name}
@@ -92,7 +94,7 @@
 
       <div>
         <label
-          class="block text-[10px] md:text-xs text-slate-700 dark:text-slate-300 mb-1"
+          class="mb-1 block text-[10px] tracking-[0.12em] text-slate-700 uppercase md:text-xs dark:text-slate-300"
           for="email"
           >Email</label
         >
@@ -100,7 +102,7 @@
           id="email"
           type="email"
           required
-          class="w-full border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 rounded-md px-3 py-2 text-[10px] md:text-xs focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-slate-700 transition-colors"
+          class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-[10px] focus:ring-2 focus:ring-cyan-200 focus:outline-none md:text-xs dark:border-slate-700 dark:bg-slate-950 dark:focus:ring-cyan-900"
           autocomplete="email"
           placeholder="you@example.com"
           bind:value={email}
@@ -110,7 +112,7 @@
 
     <div class="mt-3">
       <label
-        class="block text-[10px] md:text-xs text-slate-700 dark:text-slate-300 mb-1"
+        class="mb-1 block text-[10px] tracking-[0.12em] text-slate-700 uppercase md:text-xs dark:text-slate-300"
         for="msg"
         >Message</label
       >
@@ -118,8 +120,8 @@
         id="msg"
         required
         rows="5"
-        class="w-full border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-950 rounded-md px-3 py-2 text-[10px] md:text-xs focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-slate-700 resize-none transition-colors"
-        placeholder="Tell me a bit about what you’re working on…"
+        class="w-full resize-none rounded-lg border border-slate-200 bg-white px-3 py-2 text-[10px] focus:ring-2 focus:ring-cyan-200 focus:outline-none md:text-xs dark:border-slate-700 dark:bg-slate-950 dark:focus:ring-cyan-900"
+        placeholder="Tell me a bit about what you're working on..."
         bind:value={message}
       ></textarea>
     </div>
@@ -131,7 +133,7 @@
 
       <button
         type="submit"
-        class="inline-flex items-center gap-2 bg-gray-900 dark:bg-slate-200 text-white dark:text-slate-900 rounded-md px-3 py-2 text-[10px] md:text-xs hover:bg-gray-800 dark:hover:bg-white transition-colors"
+        class="inline-flex items-center gap-2 rounded-lg bg-cyan-700 px-3 py-2 text-[10px] text-white transition hover:bg-cyan-600 md:text-xs dark:bg-cyan-500 dark:text-slate-950 dark:hover:bg-cyan-400"
       >
         <Send class="size-3 md:size-4" />
         Send

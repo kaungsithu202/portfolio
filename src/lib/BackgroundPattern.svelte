@@ -1,9 +1,15 @@
 <div
-  class="min-h-screen w-full relative z-0 bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
+  class="relative z-0 min-h-screen w-full overflow-hidden bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100"
 >
-  <!-- Dashed Gradient Background -->
   <div
-    class="absolute inset-0 -z-10"
+    class="pointer-events-none absolute -top-24 -left-16 -z-10 h-80 w-80 rounded-full bg-cyan-300/35 blur-3xl dark:bg-cyan-500/20"
+  ></div>
+  <div
+    class="pointer-events-none absolute -right-20 top-40 -z-10 h-96 w-96 rounded-full bg-amber-300/30 blur-3xl dark:bg-amber-500/20"
+  ></div>
+
+  <div
+    class="absolute inset-0 -z-10 opacity-70"
     style="
       background-image:
         linear-gradient(to right, var(--pattern-line) 1px, transparent 1px),

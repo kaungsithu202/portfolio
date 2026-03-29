@@ -40,7 +40,7 @@
 
 <button
   type="button"
-  class="inline-flex items-center gap-2 border border-gray-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 rounded-md px-3 py-1.5 hover:bg-gray-100 dark:hover:bg-slate-800 cursor-pointer transition-colors"
+  class="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-slate-700 shadow-[0_10px_20px_-18px_rgba(15,23,42,0.8)] transition hover:border-cyan-300 hover:text-cyan-700 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:border-cyan-700 dark:hover:text-cyan-300"
   aria-label="Toggle dark mode"
   aria-pressed={theme === "dark"}
   title="Toggle dark mode"
@@ -48,9 +48,9 @@
 >
   {#if theme === "dark"}
     <Sun size="16" />
-    <span class="text-[10px] md:text-xs">Light</span>
+    <span class="text-[10px] tracking-[0.14em] uppercase md:text-xs">Light</span>
   {:else}
     <Moon size="16" />
-    <span class="text-[10px] md:text-xs">Dark</span>
+    <span class="text-[10px] tracking-[0.14em] uppercase md:text-xs">Dark</span>
   {/if}
 </button>

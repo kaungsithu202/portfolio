@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"); */
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -12,7 +11,9 @@
 }
 
 body {
-  background-color: #ffffff;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .dark body {
@@ -20,77 +21,15 @@ body {
 }
 
 :root {
-  --pattern-line: #e7e5e4;
+  --pattern-line: rgba(15, 23, 42, 0.08);
 }
 
 .dark {
-  --pattern-line: oklch(37.2% 0.044 257.287);
-}
-
-@font-face {
-  font-family: "Geist Pixel Circle";
-  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Circle.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Geist Pixel Grid";
-  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Grid.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Geist Pixel Line";
-  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Line.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Geist Pixel Square";
-  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Square.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Geist Pixel Triangle";
-  src: url("/fonts/GeistPixel/webfonts/GeistPixel-Triangle.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  --pattern-line: rgba(148, 163, 184, 0.16);
 }
 
 @theme {
-  --font-josefin: "Josefin Sans", sans-serif;
-
-  --font-geist-pixel-circle:
-    "Geist Pixel Circle", "Geist Mono", ui-monospace, SFMono-Regular,
-    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
-    "Courier New", monospace;
-  --font-geist-pixel-grid:
-    "Geist Pixel Grid", "Geist Mono", ui-monospace, SFMono-Regular,
-    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
-    "Courier New", monospace;
-  --font-geist-pixel-line:
-    "Geist Pixel Line", "Geist Mono", ui-monospace, SFMono-Regular,
-    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
-    "Courier New", monospace;
-  --font-geist-pixel-square:
-    "Geist Pixel Square", "Geist Mono", ui-monospace, SFMono-Regular,
-    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
-    "Courier New", monospace;
-  --font-geist-pixel-triangle:
-    "Geist Pixel Triangle", "Geist Mono", ui-monospace, SFMono-Regular,
-    "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono",
-    "Courier New", monospace;
+  --font-roboto: "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
 
   --animate-marquee: marquee 25s linear infinite;
   --animate-marquee-second: marquee 8s linear infinite;
