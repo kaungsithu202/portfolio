@@ -1,41 +1,158 @@
 <script>
   import { ExternalLinkIcon } from "@lucide/svelte";
 
-  let { company, position, timeline, link, image } = $props();
+  let { company, position, timeline, link, image, summary = "" } = $props();
 </script>
 
-<div
-  class="rounded-xl border border-slate-200/80 bg-white/70 p-3 backdrop-blur md:p-4 dark:border-slate-700/70 dark:bg-slate-900/45"
->
-  <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-    <div class="flex items-center gap-3">
+<article class="experience-entry">
+  <div class="experience-main">
+    <div class="experience-company">
       <img
         src={image}
-        class="size-10 rounded-xl object-cover ring-1 ring-slate-200 md:size-14 dark:ring-slate-700"
-        alt={company}
+        alt={`${company} logo`}
+        class="experience-image"
+        width="56"
+        height="56"
+        loading="lazy"
+        decoding="async"
       />
-      <div>
-        <p class="text-xs font-semibold tracking-[0.12em] md:text-sm">{company}</p>
-        <p class="mt-1 text-[10px] text-slate-600 md:text-xs dark:text-slate-300">
-          {position}
-        </p>
+      <div class="experience-copy">
+        <h3>{company}</h3>
+        <p>{position}</p>
+        {#if summary}
+          <p class="experience-summary">{summary}</p>
+        {/if}
       </div>
     </div>
 
-    <div class="flex items-center gap-2 md:gap-3">
-      <p
-        class="text-[9px] tracking-[0.16em] text-slate-500 uppercase md:text-[11px] dark:text-slate-400"
-      >
-        {timeline}
-      </p>
+    <div class="experience-meta">
+      <p class="experience-timeline">{timeline}</p>
       <a
         href={link}
-        class="inline-flex items-center gap-1 rounded-md border border-slate-200 bg-white/80 px-2 py-1 text-[10px] transition hover:border-cyan-300 hover:text-cyan-700 md:text-xs dark:border-slate-700 dark:bg-slate-950/50 dark:hover:border-cyan-700 dark:hover:text-cyan-300"
+        class="experience-link"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`Open ${company}`}
       >
-        Company <ExternalLinkIcon class="size-3" />
+        Company <ExternalLinkIcon class="size-3.5" />
       </a>
     </div>
   </div>
-</div>
+</article>
+
+<style>
+  .experience-entry {
+    padding-block: clamp(1.5rem, 4vw, 2.25rem);
+  }
+
+  .experience-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .experience-company {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .experience-image {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    border: 1px solid color-mix(in oklch, var(--line) 68%, var(--accent) 32%);
+    object-fit: cover;
+    background: color-mix(in oklch, var(--surface) 90%, var(--accent-soft) 10%);
+  }
+
+  .experience-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .experience-copy h3 {
+    font-size: 1.0625rem;
+    font-weight: var(--weight-bold);
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    color: color-mix(in oklch, var(--text) 84%, var(--accent) 16%);
+  }
+
+  .experience-copy p {
+    font-size: var(--text-body);
+    line-height: var(--lh-body);
+    color: var(--muted);
+  }
+
+  .experience-summary {
+    max-width: 44ch;
+    color: var(--text);
+  }
+
+  .experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .experience-timeline {
+    font-size: var(--text-label);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-label-wide);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    color: color-mix(in oklch, var(--accent-cool) 62%, var(--text) 38%);
+  }
+
+  .experience-link {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid color-mix(in oklch, var(--line) 62%, var(--accent) 38%);
+    border-radius: 999px;
+    background: color-mix(in oklch, var(--surface) 86%, var(--accent-soft) 14%);
+    padding: 0 0.9rem;
+    font-size: var(--text-label);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .experience-link:hover {
+    border-color: color-mix(in oklch, var(--accent) 58%, var(--line-strong) 42%);
+    background: color-mix(in oklch, var(--surface) 76%, var(--accent-soft) 24%);
+    transform: translateY(-1px);
+  }
+
+  @media (min-width: 48rem) {
+    .experience-main {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .experience-meta {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .experience-link {
+      transition: none;
+    }
+
+    .experience-link:hover {
+      transform: none;
+    }
+  }
+</style>
